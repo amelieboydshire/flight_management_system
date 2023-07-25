@@ -20,4 +20,8 @@ public class Airline {
     public void addFlight (Flight flight){
         flightList.add(flight);
     }
+
+    public void cancelFlight(Flight flight){
+        flightList.remove(flight);
+    }
 }
