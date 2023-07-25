@@ -26,6 +26,9 @@ public class Airline {
     }
 
     public void displayAvailableFlights() {
+        for(Flight flight : this.flightList){
+            System.out.println(flight.getFlightId());
+        }
         System.out.println(flightList);
     }
 }

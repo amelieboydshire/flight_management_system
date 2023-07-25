@@ -3,20 +3,33 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
 public class AirlineTest {
 
-    private ArrayList<Flight> flightList;
+    Airline airline;
+    Flight flight1;
 
     @BeforeEach
     public void setUp(){
-        Flight flight1 = new Flight("Spain", 1);
-        Flight flight2 = new Flight("Portugal", 2);
-        flightList.add(flight1);
-        flightList.add(flight2);
+        airline = new Airline();
+        flight1 = new Flight("Spain", 3);
+        airline.addFlight(flight1);
     }
 
     @Test
-    public void canGetFlights(){
+    public void canAddFlights(){
+        Flight flight2 = new Flight("Portugal", 2);
+        airline.addFlight(flight2);
+        assertThat(airline.getFlights().get(1)).isEqualTo(flight2);
 
     }
+
+    @Test
+    public void canCancelFlights() {
+        airline.cancelFlight(flight1);
+        assertThat(airline.getFlights().size()).isEqualTo(0);
+    }
+
+   
 }
