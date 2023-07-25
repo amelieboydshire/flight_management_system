@@ -35,7 +35,7 @@ public class Flight {
         this.passengerList  = passengerList;
     }
 
-    public void addPassenger (Passenger passenger){
+    public void bookPassenger (Passenger passenger){
         passengerList.add(passenger);
     }
 
