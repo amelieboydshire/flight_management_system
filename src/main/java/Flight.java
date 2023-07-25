@@ -8,6 +8,7 @@ public class Flight {
     public Flight(String destination, int flightId) {
         this.destination = destination;
         this.flightId = flightId;
+        this.passengerList = new ArrayList<>();
     }
 
     public String getDestination() {
@@ -28,10 +29,6 @@ public class Flight {
 
     public ArrayList<Passenger> getPassengers() {
         return passengerList;
-    }
-
-    public void setPassengers(ArrayList<Passenger> passengerList) {
-        this.passengerList  = passengerList;
     }
 
     public void bookPassenger (Passenger passenger){

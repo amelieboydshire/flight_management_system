@@ -10,14 +10,12 @@ public class FlightTest {
 
     private Flight flight1;
     private Flight flight2;
-    private ArrayList<Passenger> passengerList;
 
 
     @BeforeEach
     public void setUp(){
         flight1 = new Flight("Spain", 1);
         flight2 = new Flight("Portugal", 2);
-        passengerList = new ArrayList<>();
     }
 
     @Test
@@ -46,9 +44,10 @@ public class FlightTest {
     public void canBookPassenger(){
         Passenger passenger1 = new Passenger("Amelie", "083839239", 1);
         Passenger passenger2 = new Passenger("Hannah", "047647282", 2);
-        passengerList.add(passenger1);
-        passengerList.add(passenger2);
-        assertThat(passengerList.contains(passenger1));
+        flight1.bookPassenger(passenger1);
+        flight2.bookPassenger(passenger2);
+        assertThat(flight1.getPassengers().get(0)).isEqualTo(passenger1);
+        assertThat(flight2.getPassengers().get(0)).isEqualTo(passenger2);
     }
 
 }

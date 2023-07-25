@@ -5,8 +5,8 @@ public class Airline {
 
     private ArrayList<Flight> flightList;
 
-    public Airline(ArrayList<Flight> flightList) {
-        this.flightList = flightList;
+    public Airline() {
+        this.flightList = new ArrayList<>();
     }
 
     public ArrayList<Flight> getFlights() {
@@ -25,7 +25,7 @@ public class Airline {
         flightList.remove(flight);
     }
 
-    public void displayAvailableFlights(Flight flightList) {
+    public void displayAvailableFlights() {
         System.out.println(flightList);
     }
 }
