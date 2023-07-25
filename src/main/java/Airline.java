@@ -5,6 +5,9 @@ public class Airline {
 
     private ArrayList<Flight> flights;
 
-    
+    public Airline(ArrayList<Flight> flights) {
+        this.flights = flights;
+    }
 
+    
 }
