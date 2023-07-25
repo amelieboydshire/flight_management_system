@@ -36,7 +36,7 @@ public class Flight {
     }
 
     public void addPassenger (Passenger passenger){
-
+        passengerList.add(passenger);
     }
 
 }
