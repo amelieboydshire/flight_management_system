@@ -24,4 +24,8 @@ public class Airline {
     public void cancelFlight(Flight flight){
         flightList.remove(flight);
     }
+
+    public void displayAvailableFlights(Flight flightList) {
+        System.out.println(flightList);
+    }
 }
